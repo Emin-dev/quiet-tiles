@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "quiet-tiles",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["server.local.mjs"],
+      "port": 8083
+    }
+  ]
+}
