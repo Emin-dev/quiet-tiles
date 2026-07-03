@@ -84,6 +84,12 @@ body {
   padding: 0 16px 32px;
 }
 
+/* Same fix as .modal[hidden] above: the `hidden` attribute alone doesn't
+   win against `.view { display: flex }` at equal specificity. */
+.view[hidden] {
+  display: none;
+}
+
 .tagline {
   color: var(--ink-soft);
   font-size: 16px;
@@ -251,6 +257,13 @@ body {
   justify-content: center;
   z-index: 20;
   padding: 0;
+}
+
+/* The HTML `hidden` attribute alone doesn't win against `.modal { display: flex }`
+   at equal specificity — this explicit override is required for hidden to
+   actually hide the modal. */
+.modal[hidden] {
+  display: none;
 }
 
 @media (min-width: 480px) {
